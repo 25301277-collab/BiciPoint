@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 730 520" role="img" aria-label="Bicicleta verde y naranja en taller">
+ <ellipse cx="362" cy="444" rx="292" ry="18" fill="#c1d1c1" opacity=".6"/>
+ <g opacity=".6" stroke="#86a49a" stroke-width="4" fill="none"><path d="M55 130h120M55 147h85M580 112h94M605 129h69"/><path d="M50 185v-96M675 187V79"/></g>
+ <rect x="68" y="63" width="82" height="36" rx="8" fill="#f7faf3" opacity=".78"/><text x="109" y="86" font-family="Arial" text-anchor="middle" fill="#153830" font-weight="bold" font-size="13">BIKE FIX</text>
+ <g fill="none" stroke="#1b3d34" stroke-linejoin="round"><circle cx="173" cy="370" r="119" stroke-width="14"/><circle cx="564" cy="370" r="119" stroke-width="14"/></g>
+ <g fill="none" stroke="#64867c" stroke-width="2" opacity=".7"><path d="M173 251v238m-119-119h238m-203-84 168 168m-168 0 168-168M564 251v238m-119-119h238m-203-84 168 168m-168 0 168-168"/></g>
+ <g fill="none" stroke="#f06c3f" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"><path d="M173 370 276 196 363 371H173L336 195 564 370"/></g>
+ <path d="M363 371 336 195" stroke="#153830" stroke-width="11" stroke-linecap="round"/>
+ <path d="M564 370 521 182" stroke="#153830" stroke-width="11" stroke-linecap="round"/>
+ <g fill="none" stroke="#153830" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"><path d="M300 188h-54m273-7 31-35h52"/><path d="M580 147h38m-38 0-10 11"/></g>
+ <path d="M248 178q-12-10 1-15h56q11 8-2 15z" fill="#153830"/>
+ <circle cx="363" cy="371" r="28" fill="#153830" stroke="#f5f5eb" stroke-width="7"/><circle cx="363" cy="371" r="8" fill="#f06c3f"/>
+ <g stroke="#153830" stroke-width="8" stroke-linecap="round"><path d="m363 371 31 28m-31-28-27-28"/></g>
+ <path d="M455 165h110" stroke="#a0bab0" stroke-width="3" stroke-dasharray="6 8" opacity=".9"/><circle cx="458" cy="165" r="7" fill="#f06c3f"/>
+</svg>

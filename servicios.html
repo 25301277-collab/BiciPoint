@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conoce los servicios de reparación y mantenimiento de BiciPoint.">
+  <title>Servicios | BiciPoint</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="libs/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/estilos.css" rel="stylesheet">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="enlace-saltar" href="#contenido">Saltar al contenido principal</a>
+  <header class="barra-principal sticky-top">
+    <nav class="navbar navbar-expand-lg" aria-label="Menú principal">
+      <div class="container">
+        <a class="navbar-brand marca" href="index.html" aria-label="BiciPoint, ir al inicio"><img src="assets/logo.svg" width="39" height="39" alt="" loading="eager"> <span>Bici<span class="marca-acento">Point</span></span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuBici" aria-controls="menuBici" aria-expanded="false" aria-label="Mostrar menú"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="menuBici">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2"><li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+<li class="nav-item"><a class="nav-link active" href="servicios.html" aria-current="page">Servicios</a></li>
+<li class="nav-item"><a class="nav-link" href="precios.html">Precios</a></li>
+<li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+<li class="nav-item"><a class="nav-link" href="citas.html">Agendar cita</a></li></ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main id="contenido">
+    <section class="cabecera-interna"><div class="container"><p class="mini-titulo">SERVICIOS</p><h1>Cuidamos cada parte <span class="texto-naranja">de tu bici.</span></h1><p>Desde ajustes sencillos hasta una revisión completa. Elige el servicio que necesites.</p></div></section>
+    <section class="seccion-espacio pt-4"><div class="container">
+      <div class="row g-3 galeria-taller mb-5">
+        <div class="col-md-7"><div class="foto-galeria"><img src="assets/foto-mecanico.jpg" alt="Mecánico revisando los frenos de una bicicleta" loading="lazy"><span>Ajustes y reparaciones</span></div></div>
+        <div class="col-md-5"><div class="foto-galeria"><img src="assets/foto-detalle.jpg" alt="Detalle de una cadena y los cambios de bicicleta" loading="lazy"><span>Mantenimiento de transmisión</span></div></div>
+      </div>
+      <div class="filtros d-flex flex-wrap gap-2 mb-4" role="group" aria-label="Filtrar servicios">
+        <button class="filtro-activo filtro-servicio" data-filtro="todos" type="button">Todos</button>
+        <button class="filtro-servicio" aria-pressed="false" data-filtro="ajustes" type="button">Ajustes</button>
+        <button class="filtro-servicio" aria-pressed="false" data-filtro="mantenimiento" type="button">Mantenimiento</button>
+      </div>
+      <div class="row g-4" id="listaServicios">
+        <article class="col-md-6 col-lg-4 servicio-item" data-categoria="ajustes"><div class="tarjeta-detalle"><div class="cabeza-tarjeta"><span><i class="bi bi-sliders2" aria-hidden="true"></i></span><span class="tipo">AJUSTES</span></div><h2>Ajuste de frenos</h2><p>Revisión de zapatas o balatas, tensión y funcionamiento de los frenos.</p><div class="d-flex justify-content-between align-items-end"><strong>Desde $120</strong><a href="citas.html?servicio=Ajuste%20de%20frenos" aria-label="Agendar ajuste de frenos"><i class="bi bi-arrow-up-right-circle-fill" aria-hidden="true"></i></a></div></div></article>
+        <article class="col-md-6 col-lg-4 servicio-item" data-categoria="ajustes"><div class="tarjeta-detalle"><div class="cabeza-tarjeta"><span><i class="bi bi-gear-wide-connected" aria-hidden="true"></i></span><span class="tipo">AJUSTES</span></div><h2>Ajuste de cambios</h2><p>Calibración de velocidades para mejorar el cambio entre engranes.</p><div class="d-flex justify-content-between align-items-end"><strong>Desde $150</strong><a href="citas.html?servicio=Ajuste%20de%20cambios" aria-label="Agendar ajuste de cambios"><i class="bi bi-arrow-up-right-circle-fill" aria-hidden="true"></i></a></div></div></article>
+        <article class="col-md-6 col-lg-4 servicio-item" data-categoria="ajustes"><div class="tarjeta-detalle"><div class="cabeza-tarjeta"><span><i class="bi bi-circle-half" aria-hidden="true"></i></span><span class="tipo">AJUSTES</span></div><h2>Cambio de cámara</h2><p>Retiramos la rueda, sustituimos la cámara y comprobamos la presión.</p><div class="d-flex justify-content-between align-items-end"><strong>Desde $100*</strong><a href="citas.html?servicio=Cambio%20de%20c%C3%A1mara" aria-label="Agendar cambio de cámara"><i class="bi bi-arrow-up-right-circle-fill" aria-hidden="true"></i></a></div></div></article>
+        <article class="col-md-6 col-lg-4 servicio-item" data-categoria="mantenimiento"><div class="tarjeta-detalle"><div class="cabeza-tarjeta"><span><i class="bi bi-droplet" aria-hidden="true"></i></span><span class="tipo">MANTENIMIENTO</span></div><h2>Limpieza y lubricación</h2><p>Retiramos suciedad y lubricamos los componentes de la transmisión.</p><div class="d-flex justify-content-between align-items-end"><strong>Desde $160</strong><a href="citas.html?servicio=Limpieza%20y%20lubricaci%C3%B3n" aria-label="Agendar limpieza y lubricación"><i class="bi bi-arrow-up-right-circle-fill" aria-hidden="true"></i></a></div></div></article>
+        <article class="col-md-6 col-lg-4 servicio-item" data-categoria="mantenimiento"><div class="tarjeta-detalle"><div class="cabeza-tarjeta"><span><i class="bi bi-tools" aria-hidden="true"></i></span><span class="tipo">MANTENIMIENTO</span></div><h2>Afinación básica</h2><p>Revisión de frenos, cambios, tornillería y lubricación ligera.</p><div class="d-flex justify-content-between align-items-end"><strong>Desde $280</strong><a href="citas.html?servicio=Afinaci%C3%B3n%20b%C3%A1sica" aria-label="Agendar afinación básica"><i class="bi bi-arrow-up-right-circle-fill" aria-hidden="true"></i></a></div></div></article>
+        <article class="col-md-6 col-lg-4 servicio-item" data-categoria="mantenimiento"><div class="tarjeta-detalle"><div class="cabeza-tarjeta"><span><i class="bi bi-bicycle" aria-hidden="true"></i></span><span class="tipo">MANTENIMIENTO</span></div><h2>Mantenimiento general</h2><p>Revisión más completa de componentes y necesidades de ajuste.</p><div class="d-flex justify-content-between align-items-end"><strong>Desde $550</strong><a href="citas.html?servicio=Mantenimiento%20general" aria-label="Agendar mantenimiento general"><i class="bi bi-arrow-up-right-circle-fill" aria-hidden="true"></i></a></div></div></article>
+      </div>
+      <p class="nota mt-4">* Precios de ejemplo para el proyecto escolar. Materiales y refacciones pueden cobrarse por separado.</p>
+    </div></section>
+    <section class="seccion-espacio fondo-suave"><div class="container"><div class="row align-items-center g-4"><div class="col-lg-8"><p class="mini-titulo">¿NO SABES QUÉ SERVICIO ELEGIR?</p><h2>Cuéntanos qué le pasa a tu bici.</h2><p class="mb-0">Describe la falla en el formulario y solicita una revisión.</p></div><div class="col-lg-4 text-lg-end"><a href="citas.html" class="boton-oscuro">Solicitar revisión <i class="bi bi-arrow-right" aria-hidden="true"></i></a></div></div></div></section>
+  </main>
+  <footer class="pie-pagina">
+    <div class="container">
+      <div class="row gy-4 align-items-start">
+        <div class="col-md-5">
+          <a href="index.html" class="marca pie-marca"><img src="assets/logo-claro.svg" width="34" height="34" alt=""><span>Bici<span class="marca-acento">Point</span></span></a>
+          <p class="pie-texto mt-3 mb-0">Cuidamos tu bici para que sigas rodando. Proyecto demostrativo de un taller de bicicletas.</p>
+        </div>
+        <div class="col-6 col-md-3">
+          <h2 class="pie-titulo">Explora</h2>
+          <a href="servicios.html">Servicios</a><a href="precios.html">Precios</a><a href="nosotros.html">Nosotros</a>
+        </div>
+        <div class="col-6 col-md-4">
+          <h2 class="pie-titulo">¿Necesitas una revisión?</h2>
+          <p class="pie-texto">Cuéntanos qué necesita tu bicicleta y prepara una solicitud de cita.</p>
+          <a class="pie-enlace" href="citas.html">Agendar cita <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="pie-final d-flex flex-column flex-sm-row justify-content-between gap-2"><span></span><span></span></div>
+    </div>
+  </footer>
+  <script src="libs/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="js/funciones.js"></script>
+</body>
+</html>

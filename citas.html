@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Solicita una revisión de bicicleta con formulario y WhatsApp.">
+  <title>Agendar cita | BiciPoint</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="libs/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/estilos.css" rel="stylesheet">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="enlace-saltar" href="#contenido">Saltar al contenido principal</a>
+  <header class="barra-principal sticky-top">
+    <nav class="navbar navbar-expand-lg" aria-label="Menú principal">
+      <div class="container">
+        <a class="navbar-brand marca" href="index.html" aria-label="BiciPoint, ir al inicio"><img src="assets/logo.svg" width="39" height="39" alt="" loading="eager"> <span>Bici<span class="marca-acento">Point</span></span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuBici" aria-controls="menuBici" aria-expanded="false" aria-label="Mostrar menú"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="menuBici">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2"><li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+<li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+<li class="nav-item"><a class="nav-link" href="precios.html">Precios</a></li>
+<li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+<li class="nav-item"><a class="nav-link active" href="citas.html" aria-current="page">Agendar cita</a></li></ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main id="contenido">
+    <section class="cabecera-interna"><div class="container"><p class="mini-titulo">AGENDAR CITA</p><h1>Cuéntanos qué necesita <span class="texto-naranja">tu bicicleta.</span></h1><p>Llena los datos y prepara un mensaje para solicitar atención por WhatsApp.</p></div></section>
+    <section class="seccion-espacio pt-4"><div class="container"><div class="row g-5">
+      <div class="col-lg-7"><div class="formulario-tarjeta"><h2>Solicitud de revisión</h2><p class="mb-4">Los campos marcados con * son obligatorios.</p>
+        <form id="formCita" novalidate>
+          <div class="row g-3">
+            <div class="col-md-6"><label class="form-label" for="nombre">Nombre completo *</label><input class="form-control" id="nombre" name="nombre" type="text" minlength="3" maxlength="60" placeholder="Tu nombre" autocomplete="name" required><div class="invalid-feedback">Escribe tu nombre (mínimo 3 letras).</div></div>
+            <div class="col-md-6"><label class="form-label" for="telefono">Teléfono (10 dígitos) *</label><input class="form-control" id="telefono" name="telefono" type="tel" inputmode="numeric" maxlength="10" pattern="[0-9]{10}" placeholder="Ej. 7711234567" autocomplete="tel-national" required><div class="invalid-feedback">Escribe 10 números, sin espacios.</div></div>
+            <div class="col-md-6"><label class="form-label" for="bicicleta">Tipo de bicicleta *</label><select class="form-select" id="bicicleta" name="bicicleta" required><option value="">Selecciona una opción</option><option>Montaña</option><option>Urbana</option><option>Ruta</option><option>Infantil</option><option>Otra</option></select><div class="invalid-feedback">Selecciona tu tipo de bicicleta.</div></div>
+            <div class="col-md-6"><label class="form-label" for="servicio">Servicio que necesitas *</label><select class="form-select" id="servicio" name="servicio" required><option value="">Selecciona un servicio</option><option>Ajuste de frenos</option><option>Ajuste de cambios</option><option>Cambio de cámara</option><option>Limpieza y lubricación</option><option>Afinación básica</option><option>Mantenimiento general</option><option>Revisión / no estoy seguro</option></select><div class="invalid-feedback">Elige un servicio.</div></div>
+            <div class="col-md-6"><label class="form-label" for="fecha">Fecha de preferencia *</label><input class="form-control" id="fecha" name="fecha" type="date" required><div class="invalid-feedback">Selecciona una fecha válida desde hoy.</div></div>
+            <div class="col-md-6"><label class="form-label" for="horario">Horario de preferencia *</label><select class="form-select" id="horario" name="horario" required><option value="">Selecciona un horario</option><option>Por la mañana</option><option>Por la tarde</option></select><div class="invalid-feedback">Selecciona un horario.</div></div>
+            <div class="col-12"><label class="form-label" for="comentarios">¿Qué le pasa a tu bici? *</label><textarea class="form-control" id="comentarios" name="comentarios" rows="4" minlength="10" maxlength="350" placeholder="Por ejemplo: al frenar hace un ruido y la llanta roza..." required></textarea><div class="invalid-feedback">Describe el problema con al menos 10 caracteres.</div></div>
+            <div class="col-12"><div class="form-check"><input class="form-check-input" type="checkbox" id="autorizacion" required><label class="form-check-label" for="autorizacion">Entiendo que esta solicitud no confirma una cita y que los datos se usarán solo para preparar el mensaje. *</label><div class="invalid-feedback">Debes aceptar esta condición para continuar.</div></div></div>
+          </div>
+          <div id="mensajeFormulario" class="mensaje-formulario" role="status" aria-live="polite"></div>
+          <button class="boton-naranja w-100 mt-4" type="submit"><i class="bi bi-whatsapp" aria-hidden="true"></i> Preparar mensaje de WhatsApp</button>
+          <p class="nota mt-3 mb-0">En esta demostración no guardamos tus datos. WhatsApp se abre para que elijas el contacto al que deseas enviar la solicitud.</p>
+        </form></div></div>
+      <aside class="col-lg-5"><div class="ayuda-cita"><img src="assets/foto-ruta.jpg" class="foto-cita" alt="Ciclista de montaña rodando en una ruta al atardecer" loading="lazy"><div class="icono-ayuda"><i class="bi bi-chat-left-text" aria-hidden="true"></i></div><h2>¿Cómo se solicita la cita?</h2><ol><li>Elige el servicio y la fecha que prefieras.</li><li>Revisa que todos los datos estén correctos.</li><li>Presiona el botón para abrir WhatsApp con el mensaje listo.</li></ol><div class="linea-separa"></div><p><i class="bi bi-shield-check" aria-hidden="true"></i> No se almacenan datos en una base de datos.</p><p><i class="bi bi-calendar2-check" aria-hidden="true"></i> La fecha está sujeta a disponibilidad.</p><p class="mb-0"><i class="bi bi-info-circle" aria-hidden="true"></i> Para enviar directo al taller, es necesario configurar su número real.</p></div></aside>
+    </div></div></section>
+  </main>
+  <footer class="pie-pagina">
+    <div class="container">
+      <div class="row gy-4 align-items-start">
+        <div class="col-md-5">
+          <a href="index.html" class="marca pie-marca"><img src="assets/logo-claro.svg" width="34" height="34" alt=""><span>Bici<span class="marca-acento">Point</span></span></a>
+          <p class="pie-texto mt-3 mb-0">Cuidamos tu bici para que sigas rodando. Proyecto demostrativo de un taller de bicicletas.</p>
+        </div>
+        <div class="col-6 col-md-3">
+          <h2 class="pie-titulo">Explora</h2>
+          <a href="servicios.html">Servicios</a><a href="precios.html">Precios</a><a href="nosotros.html">Nosotros</a>
+        </div>
+        <div class="col-6 col-md-4">
+          <h2 class="pie-titulo">¿Necesitas una revisión?</h2>
+          <p class="pie-texto">Cuéntanos qué necesita tu bicicleta y prepara una solicitud de cita.</p>
+          <a class="pie-enlace" href="citas.html">Agendar cita <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="pie-final d-flex flex-column flex-sm-row justify-content-between gap-2"><span></span><span></span></div>
+    </div>
+  </footer>
+  <script src="libs/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="js/funciones.js"></script>
+</body>
+</html>
