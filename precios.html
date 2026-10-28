@@ -1,70 +1,338 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Consulta precios orientativos de los servicios de BiciPoint.">
-  <title>Precios | BiciPoint</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link href="libs/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
-  <link href="css/estilos.css" rel="stylesheet">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-</head>
-<body>
-  <a class="enlace-saltar" href="#contenido">Saltar al contenido principal</a>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="Consulta precios orientativos de los servicios de BiciPoint." name="description"/>
+  <title>
+   Precios | BiciPoint
+  </title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Outfit:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+  <link href="libs/bootstrap.min.css" rel="stylesheet"/>
+  <link href="libs/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet"/>
+  <link href="css/estilos.css" rel="stylesheet"/>
+  <link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+ </head>
+ <body>
+  <a class="enlace-saltar" href="#contenido">
+   Saltar al contenido principal
+  </a>
   <header class="barra-principal sticky-top">
-    <nav class="navbar navbar-expand-lg" aria-label="Menú principal">
-      <div class="container">
-        <a class="navbar-brand marca" href="index.html" aria-label="BiciPoint, ir al inicio"><img src="assets/logo.svg" width="39" height="39" alt="" loading="eager"> <span>Bici<span class="marca-acento">Point</span></span></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuBici" aria-controls="menuBici" aria-expanded="false" aria-label="Mostrar menú"><span class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="menuBici">
-          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2"><li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-<li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
-<li class="nav-item"><a class="nav-link active" href="precios.html" aria-current="page">Precios</a></li>
-<li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
-<li class="nav-item"><a class="nav-link" href="citas.html">Agendar cita</a></li></ul>
-        </div>
-      </div>
-    </nav>
+   <nav aria-label="Menú principal" class="navbar navbar-expand-lg">
+    <div class="container">
+     <a aria-label="BiciPoint, ir al inicio" class="navbar-brand marca" href="index.html">
+      <img alt="" height="39" loading="eager" src="assets/logo.svg" width="39"/>
+      <span>
+       Bici
+       <span class="marca-acento">
+        Point
+       </span>
+      </span>
+     </a>
+     <button aria-controls="menuBici" aria-expanded="false" aria-label="Mostrar menú" class="navbar-toggler" data-bs-target="#menuBici" data-bs-toggle="collapse" type="button">
+      <span class="navbar-toggler-icon">
+      </span>
+     </button>
+     <div class="collapse navbar-collapse" id="menuBici">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+       <li class="nav-item">
+        <a class="nav-link" href="index.html">
+         Inicio
+        </a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="servicios.html">
+         Servicios
+        </a>
+       </li>
+       <li class="nav-item">
+        <a aria-current="page" class="nav-link active" href="precios.html">
+         Precios
+        </a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="nosotros.html">
+         Nosotros
+        </a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="citas.html">
+         Agendar cita
+        </a>
+       </li>
+      </ul>
+     </div>
+    </div>
+   </nav>
   </header>
-  <main id="contenido">
-    <section class="cabecera-interna"><div class="container"><p class="mini-titulo">PRECIOS</p><h1>Cuida tu bici <span class="texto-naranja">sin sorpresas.</span></h1><p>Consulta precios orientativos para saber cuánto puede costar cada servicio.</p></div></section>
-    <section class="seccion-espacio pt-4"><div class="container"><div class="row g-4">
-      <article class="col-md-4"><div class="paquete"><p class="tipo">PARA UN AJUSTE RÁPIDO</p><h2>Revisión puntual</h2><p>Para cuando solo necesitas atender una falla sencilla.</p><div class="precio">$120 <small>desde</small></div><ul><li><i class="bi bi-check-lg"></i> Revisión del problema</li><li><i class="bi bi-check-lg"></i> Ajuste de un componente</li><li><i class="bi bi-check-lg"></i> Recomendaciones de cuidado</li></ul><a href="citas.html?servicio=Ajuste%20de%20frenos" class="boton-borde w-100 text-center">Solicitar cita</a></div></article>
-      <article class="col-md-4"><div class="paquete recomendado"><span class="sello-recomendado">EL MÁS SOLICITADO</span><p class="tipo">PARA EL DÍA A DÍA</p><h2>Afinación básica</h2><p>Una revisión de los puntos principales antes de salir a rodar.</p><div class="precio">$280 <small>desde</small></div><ul><li><i class="bi bi-check-lg"></i> Revisión de frenos y cambios</li><li><i class="bi bi-check-lg"></i> Ajustes generales</li><li><i class="bi bi-check-lg"></i> Lubricación ligera</li></ul><a href="citas.html?servicio=Afinaci%C3%B3n%20b%C3%A1sica" class="boton-naranja w-100 text-center">Solicitar cita</a></div></article>
-      <article class="col-md-4"><div class="paquete"><p class="tipo">PARA UNA REVISIÓN MAYOR</p><h2>Mantenimiento general</h2><p>Revisión más detallada del estado de tu bicicleta.</p><div class="precio">$550 <small>desde</small></div><ul><li><i class="bi bi-check-lg"></i> Inspección general</li><li><i class="bi bi-check-lg"></i> Ajustes principales</li><li><i class="bi bi-check-lg"></i> Recomendaciones de refacciones</li></ul><a href="citas.html?servicio=Mantenimiento%20general" class="boton-borde w-100 text-center">Solicitar cita</a></div></article>
-    </div><p class="nota mt-4">Los precios son ilustrativos. La cotización final depende del estado de la bicicleta y no incluye refacciones adicionales salvo que se indique.</p></div></section>
-    <section class="seccion-espacio fondo-suave"><div class="container"><div class="row g-5"><div class="col-lg-5"><p class="mini-titulo">PREGUNTAS COMUNES</p><h2>Antes de llevar tu bici</h2><p>Respondemos algunas dudas que suelen aparecer antes de pedir un servicio.</p><img src="assets/foto-detalle.jpg" alt="Detalle del mecanismo de cambios de una bicicleta" class="imagen-preguntas" loading="lazy"></div><div class="col-lg-7"><div class="accordion acordeon-bici" id="preguntas">
-      <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#respuesta1" aria-expanded="true" aria-controls="respuesta1">¿Los precios incluyen las piezas?</button></h3><div id="respuesta1" class="accordion-collapse collapse show" data-bs-parent="#preguntas"><div class="accordion-body">No siempre. Algunos precios corresponden a mano de obra. Si se necesita una pieza extra, se cotiza por separado.</div></div></div>
-      <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#respuesta2" aria-expanded="false" aria-controls="respuesta2">¿Puedo solicitar revisión si no sé qué falla tiene?</button></h3><div id="respuesta2" class="accordion-collapse collapse" data-bs-parent="#preguntas"><div class="accordion-body">Sí. En el formulario puedes elegir “Revisión / no estoy seguro” y explicar qué notas en tu bicicleta.</div></div></div>
-      <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#respuesta3" aria-expanded="false" aria-controls="respuesta3">¿La cita queda confirmada al llenar el formulario?</button></h3><div id="respuesta3" class="accordion-collapse collapse" data-bs-parent="#preguntas"><div class="accordion-body">No. El formulario prepara la solicitud para WhatsApp. La disponibilidad debe confirmarse directamente con el taller.</div></div></div>
-    </div></div></div></div></section>
+  <main id="contenido" tabindex="-1">
+   <section class="cabecera-interna">
+    <div class="container">
+     <p class="mini-titulo">
+      PRECIOS
+     </p>
+     <h1>
+      Cuida tu bici
+      <span class="texto-naranja">
+       sin sorpresas.
+      </span>
+     </h1>
+     <p>
+      Consulta precios orientativos para saber cuánto puede costar cada servicio.
+     </p>
+    </div>
+   </section>
+   <section class="seccion-espacio pt-4">
+    <div class="container">
+     <div class="row g-4">
+      <article class="col-md-6 col-lg-4">
+       <div class="paquete">
+        <p class="tipo">
+         PARA UN AJUSTE RÁPIDO
+        </p>
+        <h2>
+         Revisión puntual
+        </h2>
+        <p>
+         Para cuando solo necesitas atender una falla sencilla.
+        </p>
+        <div class="precio">
+         $120
+         <small>
+          desde
+         </small>
+        </div>
+        <ul>
+         <li>
+          <i aria-hidden="true" class="bi bi-check-lg">
+          </i>
+          Revisión del problema
+         </li>
+         <li>
+          <i aria-hidden="true" class="bi bi-check-lg">
+          </i>
+          Ajuste de un componente
+         </li>
+         <li>
+          <i aria-hidden="true" class="bi bi-check-lg">
+          </i>
+          Recomendaciones de cuidado
+         </li>
+        </ul>
+        <a class="boton-borde w-100 text-center" href="citas.html?servicio=Ajuste%20de%20frenos">
+         Solicitar cita
+        </a>
+       </div>
+      </article>
+      <article class="col-md-6 col-lg-4">
+       <div class="paquete recomendado">
+        <span class="sello-recomendado">
+         OPCIÓN DESTACADA
+        </span>
+        <p class="tipo">
+         PARA EL DÍA A DÍA
+        </p>
+        <h2>
+         Afinación básica
+        </h2>
+        <p>
+         Una revisión de los puntos principales antes de salir a rodar.
+        </p>
+        <div class="precio">
+         $280
+         <small>
+          desde
+         </small>
+        </div>
+        <ul>
+         <li>
+          <i aria-hidden="true" class="bi bi-check-lg">
+          </i>
+          Revisión de frenos y cambios
+         </li>
+         <li>
+          <i aria-hidden="true" class="bi bi-check-lg">
+          </i>
+          Ajustes generales
+         </li>
+         <li>
+          <i aria-hidden="true" class="bi bi-check-lg">
+          </i>
+          Lubricación ligera
+         </li>
+        </ul>
+        <a class="boton-naranja w-100 text-center" href="citas.html?servicio=Afinaci%C3%B3n%20b%C3%A1sica">
+         Solicitar cita
+        </a>
+       </div>
+      </article>
+      <article class="col-md-6 col-lg-4">
+       <div class="paquete">
+        <p class="tipo">
+         PARA UNA REVISIÓN MAYOR
+        </p>
+        <h2>
+         Mantenimiento general
+        </h2>
+        <p>
+         Revisión más detallada del estado de tu bicicleta.
+        </p>
+        <div class="precio">
+         $550
+         <small>
+          desde
+         </small>
+        </div>
+        <ul>
+         <li>
+          <i aria-hidden="true" class="bi bi-check-lg">
+          </i>
+          Inspección general
+         </li>
+         <li>
+          <i aria-hidden="true" class="bi bi-check-lg">
+          </i>
+          Ajustes principales
+         </li>
+         <li>
+          <i aria-hidden="true" class="bi bi-check-lg">
+          </i>
+          Recomendaciones de refacciones
+         </li>
+        </ul>
+        <a class="boton-borde w-100 text-center" href="citas.html?servicio=Mantenimiento%20general">
+         Solicitar cita
+        </a>
+       </div>
+      </article>
+     </div>
+     <p class="nota mt-4">
+      Los precios son ilustrativos. La cotización final depende del estado de la bicicleta y no incluye refacciones adicionales salvo que se indique.
+     </p>
+    </div>
+   </section>
+   <section class="seccion-espacio fondo-suave">
+    <div class="container">
+     <div class="row g-5">
+      <div class="col-lg-5">
+       <p class="mini-titulo">
+        PREGUNTAS COMUNES
+       </p>
+       <h2>
+        Antes de llevar tu bici
+       </h2>
+       <p>
+        Respondemos algunas dudas que suelen aparecer antes de pedir un servicio.
+       </p>
+       <img alt="Detalle del mecanismo de cambios de una bicicleta" class="imagen-preguntas" decoding="async" height="512" loading="lazy" src="assets/foto-detalle.jpg" width="768"/>
+      </div>
+      <div class="col-lg-7">
+       <div class="accordion acordeon-bici" id="preguntas">
+        <div class="accordion-item">
+         <h3 class="accordion-header">
+          <button aria-controls="respuesta1" aria-expanded="true" class="accordion-button" data-bs-target="#respuesta1" data-bs-toggle="collapse" type="button">
+           ¿Los precios incluyen las piezas?
+          </button>
+         </h3>
+         <div class="accordion-collapse collapse show" data-bs-parent="#preguntas" id="respuesta1">
+          <div class="accordion-body">
+           No siempre. Algunos precios corresponden a mano de obra. Si se necesita una pieza extra, se cotiza por separado.
+          </div>
+         </div>
+        </div>
+        <div class="accordion-item">
+         <h3 class="accordion-header">
+          <button aria-controls="respuesta2" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#respuesta2" data-bs-toggle="collapse" type="button">
+           ¿Puedo solicitar revisión si no sé qué falla tiene?
+          </button>
+         </h3>
+         <div class="accordion-collapse collapse" data-bs-parent="#preguntas" id="respuesta2">
+          <div class="accordion-body">
+           Sí. En el formulario puedes elegir “Revisión / no estoy seguro” y explicar qué notas en tu bicicleta.
+          </div>
+         </div>
+        </div>
+        <div class="accordion-item">
+         <h3 class="accordion-header">
+          <button aria-controls="respuesta3" aria-expanded="false" class="accordion-button collapsed" data-bs-target="#respuesta3" data-bs-toggle="collapse" type="button">
+           ¿La cita queda confirmada al llenar el formulario?
+          </button>
+         </h3>
+         <div class="accordion-collapse collapse" data-bs-parent="#preguntas" id="respuesta3">
+          <div class="accordion-body">
+           No. El formulario prepara la solicitud para WhatsApp. La disponibilidad debe confirmarse directamente con el taller.
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
   </main>
   <footer class="pie-pagina">
-    <div class="container">
-      <div class="row gy-4 align-items-start">
-        <div class="col-md-5">
-          <a href="index.html" class="marca pie-marca"><img src="assets/logo-claro.svg" width="34" height="34" alt=""><span>Bici<span class="marca-acento">Point</span></span></a>
-          <p class="pie-texto mt-3 mb-0">Cuidamos tu bici para que sigas rodando. Proyecto demostrativo de un taller de bicicletas.</p>
-        </div>
-        <div class="col-6 col-md-3">
-          <h2 class="pie-titulo">Explora</h2>
-          <a href="servicios.html">Servicios</a><a href="precios.html">Precios</a><a href="nosotros.html">Nosotros</a>
-        </div>
-        <div class="col-6 col-md-4">
-          <h2 class="pie-titulo">¿Necesitas una revisión?</h2>
-          <p class="pie-texto">Cuéntanos qué necesita tu bicicleta y prepara una solicitud de cita.</p>
-          <a class="pie-enlace" href="citas.html">Agendar cita <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
-        </div>
-      </div>
-      <div class="pie-final d-flex flex-column flex-sm-row justify-content-between gap-2"><span></span><span></span></div>
+   <div class="container">
+    <div class="row gy-4 align-items-start">
+     <div class="col-md-5">
+      <a class="marca pie-marca" href="index.html">
+       <img alt="" height="34" src="assets/logo-claro.svg" width="34"/>
+       <span>
+        Bici
+        <span class="marca-acento">
+         Point
+        </span>
+       </span>
+      </a>
+      <p class="pie-texto mt-3 mb-0">
+       Cuidamos tu bici para que sigas rodando. Proyecto demostrativo de un taller de bicicletas.
+      </p>
+     </div>
+     <div class="col-6 col-md-3">
+      <h2 class="pie-titulo">
+       Explora
+      </h2>
+      <a href="servicios.html">
+       Servicios
+      </a>
+      <a href="precios.html">
+       Precios
+      </a>
+      <a href="nosotros.html">
+       Nosotros
+      </a>
+     </div>
+     <div class="col-6 col-md-4">
+      <h2 class="pie-titulo">
+       ¿Necesitas una revisión?
+      </h2>
+      <p class="pie-texto">
+       Cuéntanos qué necesita tu bicicleta y prepara una solicitud de cita.
+      </p>
+      <a class="pie-enlace" href="citas.html">
+       Agendar cita
+       <i aria-hidden="true" class="bi bi-arrow-up-right">
+       </i>
+      </a>
+     </div>
     </div>
+    <div class="pie-final d-flex flex-column flex-sm-row justify-content-between gap-2">
+     <span>
+      © 2026 BiciPoint · Proyecto escolar demostrativo
+     </span>
+     <a href="citas.html#privacidad">
+      Privacidad y uso de datos
+     </a>
+    </div>
+   </div>
   </footer>
-  <script src="libs/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="js/funciones.js"></script>
-</body>
+  <script defer="" src="libs/bootstrap.bundle.min.js">
+  </script>
+  <script defer="" src="libs/sweetalert2.all.min.js">
+  </script>
+  <script defer="" src="js/funciones.js">
+  </script>
+ </body>
 </html>
+

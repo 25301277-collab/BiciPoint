@@ -283,3 +283,22 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   outline: 3px solid rgb(187,73,31);
   outline-offset: 3px;
 }
+
+/* Espacios y controles accesibles en pantallas pequeñas. */
+[hidden] { display: none !important; }
+html { scroll-padding-top: 100px; }
+main:focus { outline: none; }
+.tarjeta-detalle a { min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+.pie-pagina .pie-final a { font-size: inherit; text-decoration: underline; text-underline-offset: 3px; }
+.solicitud-preparada { border: 1px solid rgb(183, 201, 185); background: var(--suave); border-radius: 12px; padding: 20px; }
+.solicitud-preparada h3 { font-size: 1.3rem; }
+#resumenSolicitud { white-space: pre-wrap; overflow-wrap: anywhere; font: inherit; color: var(--verde-oscuro); }
+.privacidad { border-top: 1px solid rgb(219, 231, 217); padding-top: 25px; color: var(--gris); font-size: .9rem; scroll-margin-top: 100px; }
+.privacidad h2 { color: var(--verde); font-size: 1.4rem; }
+.boton-naranja:disabled { opacity: .65; cursor: not-allowed; }
+@media (max-width: 575.98px) {
+  .row.g-5 { --bs-gutter-x: 1.5rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .foto-galeria:hover img, .tarjeta-servicio:hover, .tarjeta-detalle:hover, .boton-naranja:hover { transform: none; }
+}

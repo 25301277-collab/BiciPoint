@@ -1,147 +1,130 @@
+"use strict";
 
-
-
+// Vacío: el visitante elige contacto. Taller real: país y número sin + ni espacios.
+const numeroTaller = "";
 const botonesFiltro = document.querySelectorAll(".filtro-servicio");
 const tarjetas = document.querySelectorAll(".servicio-item");
+const estadoServicios = document.querySelector("#estadoServicios");
 
 botonesFiltro.forEach(function (boton) {
   boton.addEventListener("click", function () {
     const filtro = boton.dataset.filtro;
-
-    botonesFiltro.forEach(function (otroBoton) {
-      otroBoton.classList.remove("filtro-activo");
+    let visibles = 0;
+    botonesFiltro.forEach(function (otro) {
+      otro.classList.toggle("filtro-activo", otro === boton);
+      otro.setAttribute("aria-pressed", String(otro === boton));
     });
-    boton.classList.add("filtro-activo");
-    botonesFiltro.forEach(function (elemento) {
-      elemento.setAttribute("aria-pressed", elemento === boton ? "true" : "false");
-    });
-
     tarjetas.forEach(function (tarjeta) {
-      if (filtro === "todos" || tarjeta.dataset.categoria === filtro) {
-        tarjeta.classList.remove("d-none");
-      } else {
-        tarjeta.classList.add("d-none");
-      }
+      const mostrar = filtro === "todos" || tarjeta.dataset.categoria === filtro;
+      tarjeta.hidden = !mostrar;
+      if (mostrar) visibles += 1;
     });
+    if (estadoServicios) {
+      estadoServicios.textContent = visibles + " servicios disponibles: " + boton.textContent.trim() + ".";
+    }
   });
 });
 
-
 const formulario = document.querySelector("#formCita");
-
 if (formulario) {
-  const fecha = document.querySelector("#fecha");
-  const servicio = document.querySelector("#servicio");
-  const aviso = document.querySelector("#mensajeFormulario");
+  const campos = formulario.querySelectorAll("input, select, textarea");
+  const fecha = formulario.querySelector("#fecha");
+  const servicio = formulario.querySelector("#servicio");
+  const nombre = formulario.querySelector("#nombre");
+  const comentarios = formulario.querySelector("#comentarios");
+  const aviso = formulario.querySelector("#mensajeFormulario");
+  const resultado = formulario.querySelector("#solicitudPreparada");
+  const resumen = formulario.querySelector("#resumenSolicitud");
+  const enlace = formulario.querySelector("#abrirWhatsApp");
 
-
-  const hoy = new Date();
-  const anio = hoy.getFullYear();
-  const mes = String(hoy.getMonth() + 1).padStart(2, "0");
-  const dia = String(hoy.getDate()).padStart(2, "0");
-  fecha.min = anio + "-" + mes + "-" + dia;
-
-  const parametros = new URLSearchParams(window.location.search);
-  const servicioSolicitado = parametros.get("servicio");
-  if (servicioSolicitado) {
-    const opciones = Array.from(servicio.options);
-    if (opciones.some(function (opcion) { return opcion.value === servicioSolicitado; })) {
-      servicio.value = servicioSolicitado;
-    }
+  function actualizarFechaMinima() {
+    const hoy = new Date();
+    fecha.min = hoy.getFullYear() + "-" + String(hoy.getMonth() + 1).padStart(2, "0") +
+      "-" + String(hoy.getDate()).padStart(2, "0");
+  }
+  function borrarSolicitud() {
+    resultado.hidden = true;
+    resumen.textContent = "";
+    enlace.removeAttribute("href");
+    aviso.className = "mensaje-formulario";
+    aviso.textContent = "";
   }
 
-  const campos = formulario.querySelectorAll("input, select, textarea");
+  actualizarFechaMinima();
+  const solicitado = new URLSearchParams(window.location.search).get("servicio");
+  if (Array.from(servicio.options).some(function (opcion) {
+    return opcion.value !== "" && opcion.value === solicitado;
+  })) servicio.value = solicitado;
+
   campos.forEach(function (campo) {
-    campo.addEventListener("input", function () {
+    function editarCampo() {
+      campo.setCustomValidity("");
       campo.classList.remove("is-invalid");
-    });
-    campo.addEventListener("change", function () {
-      campo.classList.remove("is-invalid");
-    });
+      campo.setAttribute("aria-invalid", "false");
+      borrarSolicitud();
+    }
+    campo.addEventListener("input", editarCampo);
+    campo.addEventListener("change", editarCampo);
   });
 
   formulario.addEventListener("submit", function (evento) {
-    evento.preventDefault(); 
-    aviso.className = "mensaje-formulario";
-    aviso.textContent = "";
-
-    let valido = true;
+    evento.preventDefault();
+    borrarSolicitud();
+    actualizarFechaMinima();
+    nombre.setCustomValidity("");
+    comentarios.setCustomValidity("");
+    const letras = nombre.value.match(/\p{L}/gu) || [];
+    if (nombre.value.trim().length < 3 || letras.length < 3) {
+      nombre.setCustomValidity("Escribe un nombre con al menos 3 letras.");
+    }
+    if (comentarios.value.trim().length < 10) {
+      comentarios.setCustomValidity("Describe la falla con al menos 10 caracteres.");
+    }
     campos.forEach(function (campo) {
-      if (!campo.checkValidity()) {
-        campo.classList.add("is-invalid");
-        valido = false;
-      } else {
-        campo.classList.remove("is-invalid");
-      }
+      const invalido = !campo.checkValidity();
+      campo.classList.toggle("is-invalid", invalido);
+      campo.setAttribute("aria-invalid", String(invalido));
     });
-
-    
-    const nombreCampo = document.querySelector("#nombre");
-    const comentarioCampo = document.querySelector("#comentarios");
-    if (nombreCampo.value.trim().length < 3) {
-      nombreCampo.classList.add("is-invalid");
-      valido = false;
-    }
-    if (comentarioCampo.value.trim().length < 10) {
-      comentarioCampo.classList.add("is-invalid");
-      valido = false;
-    }
-
-    
-    if (fecha.value && fecha.value < fecha.min) {
-      fecha.classList.add("is-invalid");
-      valido = false;
-    }
-
-    if (!valido) {
+    const primerError = formulario.querySelector(".is-invalid");
+    if (primerError) {
       aviso.className = "mensaje-formulario mostrar error";
-      aviso.textContent = "Revisa los campos señalados antes de continuar.";
-      const primerError = formulario.querySelector(".is-invalid");
-      if (primerError) primerError.focus();
+      aviso.textContent = "Revisa los campos señalados antes de preparar la solicitud.";
       if (typeof Swal !== "undefined") {
-        Swal.fire({icon: "warning", title: "Faltan algunos datos", text: "Revisa los campos marcados en el formulario.", confirmButtonColor: "#153830"});
-      }
+        Swal.fire({icon: "warning", title: "Revisa tu solicitud",
+          text: "Corrige los campos señalados. Aún no se ha enviado ningún dato.",
+          confirmButtonText: "Revisar datos", confirmButtonColor: "#153830", returnFocus: false
+        }).then(function () { primerError.focus(); });
+      } else primerError.focus();
       return;
     }
 
-    const nombre = document.querySelector("#nombre").value.trim();
-    const telefono = document.querySelector("#telefono").value.trim();
-    const bicicleta = document.querySelector("#bicicleta").value;
-    const horario = document.querySelector("#horario").value;
-    const comentarios = document.querySelector("#comentarios").value.trim();
-
     const mensaje = "Hola, me gustaría solicitar una revisión en BiciPoint.\n\n" +
-      "Nombre: " + nombre + "\n" +
-      "Teléfono: " + telefono + "\n" +
-      "Tipo de bici: " + bicicleta + "\n" +
-      "Servicio: " + servicio.value + "\n" +
-      "Fecha preferida: " + fecha.value + "\n" +
-      "Horario: " + horario + "\n" +
-      "Comentarios: " + comentarios + "\n\n" +
+      "Nombre: " + nombre.value.trim() + "\n" +
+      "Teléfono: " + formulario.querySelector("#telefono").value + "\n" +
+      "Tipo de bici: " + formulario.querySelector("#bicicleta").value + "\n" +
+      "Servicio: " + servicio.value + "\n" + "Fecha preferida: " + fecha.value + "\n" +
+      "Horario: " + formulario.querySelector("#horario").value + "\n" +
+      "Comentarios: " + comentarios.value.trim() + "\n\n" +
       "Quedo pendiente de confirmar disponibilidad. Gracias.";
-
-    const numeroTaller = "";
-    let enlace = "https://wa.me/?text=" + encodeURIComponent(mensaje);
-    if (numeroTaller !== "") {
-      enlace = "https://wa.me/" + numeroTaller + "?text=" + encodeURIComponent(mensaje);
-    }
-
+    // textContent conserva literalmente las entradas, sin interpretar HTML.
+    resumen.textContent = mensaje;
+    const destinatario = /^[1-9][0-9]{7,14}$/.test(numeroTaller) ? numeroTaller : "";
+    enlace.href = "https://wa.me/" + destinatario + "?text=" + encodeURIComponent(mensaje);
+    resultado.hidden = false;
     aviso.className = "mensaje-formulario mostrar correcto";
-    aviso.textContent = "¡Datos correctos! Se abrirá WhatsApp con tu solicitud. Elige el contacto y presiona Enviar.";
-
-    
-    const ventana = window.open(enlace, "_blank");
-    if (ventana) { ventana.opener = null; }
-    if (!ventana) {
-      
-      aviso.textContent = "Tu navegador bloqueó la nueva pestaña. Haz clic en el enlace que aparece abajo.";
-      const enlaceManual = document.createElement("a");
-      enlaceManual.href = enlace;
-      enlaceManual.target = "_blank";
-      enlaceManual.rel = "noopener noreferrer";
-      enlaceManual.textContent = "Abrir WhatsApp";
-      enlaceManual.className = "d-block mt-2 fw-bold";
-      aviso.appendChild(enlaceManual);
-    }
+    aviso.textContent = "Solicitud preparada. Revisa el resumen y abre WhatsApp cuando quieras continuar. Todavía no se ha enviado.";
+    formulario.querySelector("#tituloSolicitud").focus();
   });
+
+  formulario.addEventListener("reset", function () {
+    campos.forEach(function (campo) {
+      campo.setCustomValidity("");
+      campo.classList.remove("is-invalid");
+      campo.setAttribute("aria-invalid", "false");
+    });
+    borrarSolicitud();
+  });
+  // Sin JS, el botón queda desactivado y el aviso noscript explica el motivo.
+  formulario.noValidate = true;
+  formulario.querySelector('button[type="submit"]').disabled = false;
 }
