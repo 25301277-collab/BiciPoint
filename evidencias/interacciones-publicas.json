@@ -1,0 +1,20 @@
+[
+  {
+    "active": "Ajustes",
+    "case": "filtro público con teclado",
+    "count": 3
+  },
+  {
+    "case": "consentimiento obligatorio en publicación",
+    "invalid": [
+      "autorizacion"
+    ]
+  },
+  {
+    "case": "solicitud pública preparada",
+    "hasLink": true,
+    "service": "Ajuste de cambios",
+    "status": "Solicitud preparada. Revisa el resumen y abre WhatsApp cuando quieras continuar. Todavía no se ha enviado.",
+    "visible": true
+  }
+]

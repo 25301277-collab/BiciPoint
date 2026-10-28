@@ -1,0 +1,212 @@
+[
+  {
+    "client": 305,
+    "file": "/index.html",
+    "scroll": 305,
+    "width": 320
+  },
+  {
+    "client": 305,
+    "file": "/servicios.html",
+    "scroll": 305,
+    "width": 320
+  },
+  {
+    "client": 305,
+    "file": "/precios.html",
+    "scroll": 305,
+    "width": 320
+  },
+  {
+    "client": 305,
+    "file": "/nosotros.html",
+    "scroll": 305,
+    "width": 320
+  },
+  {
+    "client": 305,
+    "file": "/citas.html",
+    "scroll": 305,
+    "width": 320
+  },
+  {
+    "client": 375,
+    "file": "/index.html",
+    "scroll": 375,
+    "width": 390
+  },
+  {
+    "client": 375,
+    "file": "/servicios.html",
+    "scroll": 375,
+    "width": 390
+  },
+  {
+    "client": 375,
+    "file": "/precios.html",
+    "scroll": 375,
+    "width": 390
+  },
+  {
+    "client": 375,
+    "file": "/nosotros.html",
+    "scroll": 375,
+    "width": 390
+  },
+  {
+    "client": 375,
+    "file": "/citas.html",
+    "scroll": 375,
+    "width": 390
+  },
+  {
+    "brokenImages": [],
+    "client": 753,
+    "current": 1,
+    "file": "/index.html",
+    "h1": 1,
+    "missingAlt": 0,
+    "scroll": 753,
+    "width": 768
+  },
+  {
+    "brokenImages": [],
+    "client": 753,
+    "current": 1,
+    "file": "/servicios.html",
+    "h1": 1,
+    "missingAlt": 0,
+    "scroll": 753,
+    "width": 768
+  },
+  {
+    "brokenImages": [],
+    "client": 753,
+    "current": 1,
+    "file": "/precios.html",
+    "h1": 1,
+    "missingAlt": 0,
+    "scroll": 753,
+    "width": 768
+  },
+  {
+    "brokenImages": [],
+    "client": 753,
+    "current": 1,
+    "file": "/nosotros.html",
+    "h1": 1,
+    "missingAlt": 0,
+    "scroll": 753,
+    "width": 768
+  },
+  {
+    "brokenImages": [],
+    "client": 753,
+    "current": 1,
+    "file": "/citas.html",
+    "h1": 1,
+    "missingAlt": 0,
+    "scroll": 753,
+    "width": 768
+  },
+  {
+    "brokenImages": [],
+    "client": 1009,
+    "current": 1,
+    "file": "/index.html",
+    "h1": 1,
+    "missingAlt": 0,
+    "scroll": 1009,
+    "width": 1024
+  },
+  {
+    "brokenImages": [],
+    "client": 1009,
+    "current": 1,
+    "file": "/servicios.html",
+    "h1": 1,
+    "missingAlt": 0,
+    "scroll": 1009,
+    "width": 1024
+  },
+  {
+    "brokenImages": [],
+    "client": 1009,
+    "current": 1,
+    "file": "/precios.html",
+    "h1": 1,
+    "missingAlt": 0,
+    "scroll": 1009,
+    "width": 1024
+  },
+  {
+    "brokenImages": [],
+    "client": 1009,
+    "current": 1,
+    "file": "/nosotros.html",
+    "h1": 1,
+    "missingAlt": 0,
+    "scroll": 1009,
+    "width": 1024
+  },
+  {
+    "brokenImages": [],
+    "client": 1009,
+    "current": 1,
+    "file": "/citas.html",
+    "h1": 1,
+    "missingAlt": 0,
+    "scroll": 1009,
+    "width": 1024
+  },
+  {
+    "brokenImages": [],
+    "client": 1425,
+    "current": 1,
+    "file": "/index.html",
+    "h1": 1,
+    "missingAlt": 0,
+    "scroll": 1425,
+    "width": 1440
+  },
+  {
+    "brokenImages": [],
+    "client": 1425,
+    "current": 1,
+    "file": "/servicios.html",
+    "h1": 1,
+    "missingAlt": 0,
+    "scroll": 1425,
+    "width": 1440
+  },
+  {
+    "brokenImages": [],
+    "client": 1425,
+    "current": 1,
+    "file": "/precios.html",
+    "h1": 1,
+    "missingAlt": 0,
+    "scroll": 1425,
+    "width": 1440
+  },
+  {
+    "brokenImages": [],
+    "client": 1425,
+    "current": 1,
+    "file": "/nosotros.html",
+    "h1": 1,
+    "missingAlt": 0,
+    "scroll": 1425,
+    "width": 1440
+  },
+  {
+    "brokenImages": [],
+    "client": 1425,
+    "current": 1,
+    "file": "/citas.html",
+    "h1": 1,
+    "missingAlt": 0,
+    "scroll": 1425,
+    "width": 1440
+  }
+]

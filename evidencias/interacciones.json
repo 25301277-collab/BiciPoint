@@ -1,0 +1,31 @@
+[
+  {
+    "active": "Ajustes",
+    "case": "filtro",
+    "count": 3
+  },
+  {
+    "active": "Todos",
+    "case": "filtro",
+    "count": 6
+  },
+  {
+    "active": "Mantenimiento",
+    "case": "filtro",
+    "count": 3
+  },
+  {
+    "case": "preselección desde servicio",
+    "selected": "Mantenimiento general"
+  },
+  {
+    "case": "menú móvil",
+    "expanded": "true",
+    "visible": true
+  },
+  {
+    "case": "acordeón",
+    "expanded": "true",
+    "visible": true
+  }
+]

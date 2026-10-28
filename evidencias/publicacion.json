@@ -1,0 +1,152 @@
+[
+  {
+    "brokenImages": [],
+    "client": 375,
+    "current": "Inicio",
+    "iconFont": "bootstrap-icons",
+    "localSweetAlert": true,
+    "scroll": 375,
+    "url": "https://25301277-collab.github.io/BiciPoint/index.html",
+    "width": 390
+  },
+  {
+    "brokenImages": [],
+    "client": 375,
+    "current": "Servicios",
+    "iconFont": "bootstrap-icons",
+    "localSweetAlert": true,
+    "scroll": 375,
+    "url": "https://25301277-collab.github.io/BiciPoint/servicios.html",
+    "width": 390
+  },
+  {
+    "brokenImages": [],
+    "client": 375,
+    "current": "Precios",
+    "iconFont": "bootstrap-icons",
+    "localSweetAlert": true,
+    "scroll": 375,
+    "url": "https://25301277-collab.github.io/BiciPoint/precios.html",
+    "width": 390
+  },
+  {
+    "brokenImages": [],
+    "client": 375,
+    "current": "Nosotros",
+    "iconFont": "bootstrap-icons",
+    "localSweetAlert": true,
+    "scroll": 375,
+    "url": "https://25301277-collab.github.io/BiciPoint/nosotros.html",
+    "width": 390
+  },
+  {
+    "brokenImages": [],
+    "client": 375,
+    "current": "Agendar cita",
+    "iconFont": "bootstrap-icons",
+    "localSweetAlert": true,
+    "scroll": 375,
+    "url": "https://25301277-collab.github.io/BiciPoint/citas.html",
+    "width": 390
+  },
+  {
+    "brokenImages": [],
+    "client": 753,
+    "current": "Inicio",
+    "iconFont": "bootstrap-icons",
+    "localSweetAlert": true,
+    "scroll": 753,
+    "url": "https://25301277-collab.github.io/BiciPoint/index.html",
+    "width": 768
+  },
+  {
+    "brokenImages": [],
+    "client": 753,
+    "current": "Servicios",
+    "iconFont": "bootstrap-icons",
+    "localSweetAlert": true,
+    "scroll": 753,
+    "url": "https://25301277-collab.github.io/BiciPoint/servicios.html",
+    "width": 768
+  },
+  {
+    "brokenImages": [],
+    "client": 753,
+    "current": "Precios",
+    "iconFont": "bootstrap-icons",
+    "localSweetAlert": true,
+    "scroll": 753,
+    "url": "https://25301277-collab.github.io/BiciPoint/precios.html",
+    "width": 768
+  },
+  {
+    "brokenImages": [],
+    "client": 753,
+    "current": "Nosotros",
+    "iconFont": "bootstrap-icons",
+    "localSweetAlert": true,
+    "scroll": 753,
+    "url": "https://25301277-collab.github.io/BiciPoint/nosotros.html",
+    "width": 768
+  },
+  {
+    "brokenImages": [],
+    "client": 753,
+    "current": "Agendar cita",
+    "iconFont": "bootstrap-icons",
+    "localSweetAlert": true,
+    "scroll": 753,
+    "url": "https://25301277-collab.github.io/BiciPoint/citas.html",
+    "width": 768
+  },
+  {
+    "brokenImages": [],
+    "client": 1425,
+    "current": "Inicio",
+    "iconFont": "bootstrap-icons",
+    "localSweetAlert": true,
+    "scroll": 1425,
+    "url": "https://25301277-collab.github.io/BiciPoint/index.html",
+    "width": 1440
+  },
+  {
+    "brokenImages": [],
+    "client": 1425,
+    "current": "Servicios",
+    "iconFont": "bootstrap-icons",
+    "localSweetAlert": true,
+    "scroll": 1425,
+    "url": "https://25301277-collab.github.io/BiciPoint/servicios.html",
+    "width": 1440
+  },
+  {
+    "brokenImages": [],
+    "client": 1425,
+    "current": "Precios",
+    "iconFont": "bootstrap-icons",
+    "localSweetAlert": true,
+    "scroll": 1425,
+    "url": "https://25301277-collab.github.io/BiciPoint/precios.html",
+    "width": 1440
+  },
+  {
+    "brokenImages": [],
+    "client": 1425,
+    "current": "Nosotros",
+    "iconFont": "bootstrap-icons",
+    "localSweetAlert": true,
+    "scroll": 1425,
+    "url": "https://25301277-collab.github.io/BiciPoint/nosotros.html",
+    "width": 1440
+  },
+  {
+    "brokenImages": [],
+    "client": 1425,
+    "current": "Agendar cita",
+    "iconFont": "bootstrap-icons",
+    "localSweetAlert": true,
+    "scroll": 1425,
+    "url": "https://25301277-collab.github.io/BiciPoint/citas.html",
+    "width": 1440
+  }
+]

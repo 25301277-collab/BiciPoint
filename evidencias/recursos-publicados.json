@@ -1,0 +1,140 @@
+[
+  {
+    "path": "assets/bicicleta-principal.svg",
+    "status": 200,
+    "bytes": 1887,
+    "matches_local": true
+  },
+  {
+    "path": "assets/favicon.svg",
+    "status": 200,
+    "bytes": 326,
+    "matches_local": true
+  },
+  {
+    "path": "assets/foto-bici-taller.jpg",
+    "status": 200,
+    "bytes": 118427,
+    "matches_local": true
+  },
+  {
+    "path": "assets/foto-detalle.jpg",
+    "status": 200,
+    "bytes": 93858,
+    "matches_local": true
+  },
+  {
+    "path": "assets/foto-mecanico.jpg",
+    "status": 200,
+    "bytes": 93293,
+    "matches_local": true
+  },
+  {
+    "path": "assets/foto-ruta.jpg",
+    "status": 200,
+    "bytes": 125166,
+    "matches_local": true
+  },
+  {
+    "path": "assets/herramientas.svg",
+    "status": 200,
+    "bytes": 1010,
+    "matches_local": true
+  },
+  {
+    "path": "assets/logo-claro.svg",
+    "status": 200,
+    "bytes": 452,
+    "matches_local": true
+  },
+  {
+    "path": "assets/logo.svg",
+    "status": 200,
+    "bytes": 452,
+    "matches_local": true
+  },
+  {
+    "path": "assets/taller.svg",
+    "status": 200,
+    "bytes": 1083,
+    "matches_local": true
+  },
+  {
+    "path": "citas.html",
+    "status": 200,
+    "bytes": 13551,
+    "matches_local": true
+  },
+  {
+    "path": "css/estilos.css",
+    "status": 200,
+    "bytes": 15718,
+    "matches_local": true
+  },
+  {
+    "path": "index.html",
+    "status": 200,
+    "bytes": 11440,
+    "matches_local": true
+  },
+  {
+    "path": "js/funciones.js",
+    "status": 200,
+    "bytes": 5651,
+    "matches_local": true
+  },
+  {
+    "path": "libs/bootstrap-icons/bootstrap-icons.min.css",
+    "status": 200,
+    "bytes": 87008,
+    "matches_local": true
+  },
+  {
+    "path": "libs/bootstrap-icons/fonts/bootstrap-icons.woff",
+    "status": 200,
+    "bytes": 180288,
+    "matches_local": true
+  },
+  {
+    "path": "libs/bootstrap-icons/fonts/bootstrap-icons.woff2",
+    "status": 200,
+    "bytes": 134044,
+    "matches_local": true
+  },
+  {
+    "path": "libs/bootstrap.bundle.min.js",
+    "status": 200,
+    "bytes": 80743,
+    "matches_local": true
+  },
+  {
+    "path": "libs/bootstrap.min.css",
+    "status": 200,
+    "bytes": 232018,
+    "matches_local": true
+  },
+  {
+    "path": "libs/sweetalert2.all.min.js",
+    "status": 200,
+    "bytes": 79150,
+    "matches_local": true
+  },
+  {
+    "path": "nosotros.html",
+    "status": 200,
+    "bytes": 7700,
+    "matches_local": true
+  },
+  {
+    "path": "precios.html",
+    "status": 200,
+    "bytes": 10599,
+    "matches_local": true
+  },
+  {
+    "path": "servicios.html",
+    "status": 200,
+    "bytes": 12283,
+    "matches_local": true
+  }
+]

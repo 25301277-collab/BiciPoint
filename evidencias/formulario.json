@@ -1,0 +1,32 @@
+[
+  {
+    "case": "vacío",
+    "invalid": 8,
+    "link": null,
+    "summaryHidden": true
+  },
+  {
+    "case": "nombre numérico, teléfono corto, fecha pasada y espacios",
+    "invalid": [
+      "nombre",
+      "telefono",
+      "fecha",
+      "comentarios"
+    ],
+    "summaryHidden": true
+  },
+  {
+    "case": "válido con caracteres especiales",
+    "focused": "tituloSolicitud",
+    "htmlChildren": 0,
+    "invalid": 0,
+    "link": "https://wa.me/?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20una%20revisi%C3%B3n%20en%20BiciPoint.%0A%0ANombre%3A%20Persona%20de%20prueba%0ATel%C3%A9fono%3A%200000000000%0ATipo%20de%20bici%3A%20Monta%C3%B1a%0AServicio%3A%20Ajuste%20de%20frenos%0AFecha%20preferida%3A%202026-10-27%0AHorario%3A%20Por%20la%20ma%C3%B1ana%0AComentarios%3A%20Prueba%20t%C3%A9cnica%3A%20freno%20roza%20%26%20%3Ccadena%3E%20necesita%20revisi%C3%B3n.%0A%0AQuedo%20pendiente%20de%20confirmar%20disponibilidad.%20Gracias.",
+    "text": "Hola, me gustaría solicitar una revisión en BiciPoint.\n\nNombre: Persona de prueba\nTeléfono: 0000000000\nTipo de bici: Montaña\nServicio: Ajuste de frenos\nFecha preferida: 2026-10-27\nHorario: Por la mañana\nComentarios: Prueba técnica: freno roza & <cadena> necesita revisión.\n\nQuedo pendiente de confirmar disponibilidad. Gracias.",
+    "visible": true
+  },
+  {
+    "case": "edición invalida resumen anterior",
+    "hidden": true,
+    "href": null
+  }
+]
